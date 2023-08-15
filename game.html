@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TooTaah</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <video
+      autoplay
+      loop
+      muted
+      id="bg-video"
+      src="Valorantdeadlock.vlo.mp4"
+    ></video>
+    <div class="Agar1">
+        
+        <a href="index.html">
+            <img class="avatar" src="./OIP.jpg" alt="">
+          </a>
+      <ul class="Agar2">
+        <li class="Agar3">
+          <a
+            class="Agar4"
+            href="https://playvalorant.com/en-us/media/"
+            target="_blank"
+            ><strong><h2>Media</h2></strong></a
+          >
+        </li>
+        <li class="Agar3">
+          <a
+            class="Agar4"
+            href="https://www.facebook.com/VALORANT"
+            target="_blank"
+          >
+            <strong><h2>Social</h2></strong></a
+          >
+        </li>
+        <li class="Agar3">
+          <a
+            class="Agar4"
+            href="https://playvalorant.com/en-us/news/"
+            target="_blank"
+            ><strong><h2>News</h2></strong></a
+          >
+        </li>
+        <li class="Agar3">
+          <a
+            class="Agar4"
+            href="https://playvalorant.com/en-us/leaderboards/"
+            target="_blank"
+            ><strong><h2>Leaderboards</h2></strong></a
+          >
+        </li>
+        <li class="Agar3">
+          <a class="Agar4" href="game.html"
+            ><strong><h2>My game</h2></strong></a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+    <div class="game-container">
+      <h1>SANASAN TOO HED VE</h1>
+      <h2>1-100n hoorond taagaarai</h2>
+      <p>zuvlumj:huiten gej bwal baga bn/ haluun gj bwl ih bn bn</p>
+      <input type="text" id="TaasanToo" />
+      <button onclick="TaasanToo()">Submit</button>
+      <p>Hint: <span id="hint"></span></p>
+
+    </div>
+</div>
+ 
+
+    <script>
+      const randomToo = Math.floor(Math.random() * 100) + 1;
+      console.log("randomToo", randomToo);
+      const TaasanToo = () => {
+        const TaasanToo = document.getElementById("TaasanToo").value;
+        const Hint = document.getElementById("hint");
+        if (randomToo < TaasanToo) {
+          Hint.textContent = "Haluun";
+        } else if (randomToo > TaasanToo) {
+          Hint.textContent = "Huiten";
+        } else {
+          Hint.textContent = "Taalaa";
+        }
+      };
+    </script>
+  </body>
+</html>
